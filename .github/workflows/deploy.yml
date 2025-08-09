@@ -1,16 +1,15 @@
 name: Push-to-EC2
 on:
   push:
-    branches:
-	master
+    branches:main
 
 jobs:
   deploy:
     name: Deploy to EC2
     runs-on: debian-latest
     steps:
-	name: Checkout the files
-      	uses: actions/checkout@v3
+      name: Checkout the files
+      uses: actions/checkout@v3
 ﻿
 name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
